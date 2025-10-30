@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enna - Criar Espaço</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- TELA DE CRIAÇÃO DE ESPAÇO -->
+  <section id="tela-criar-espaco" class="tela ativa">
+    <div class="container">
+      <img src="img/logovermelha.png" alt="Logo Enna" class="logo">
+
+      <h1>Crie seu espaço</h1>
+      <form id="form-criar-espaco">
+        <div class="campo">
+          <input type="text" id="nome" required>
+          <label for="nome">Nome completo</label>
+        </div>
+
+        <div class="campo">
+          <input type="email" id="email" required>
+          <label for="email">E-mail</label>
+        </div>
+
+        <div class="campo">
+          <input type="text" id="espaco" required>
+          <label for="espaco">Nome do espaço</label>
+        </div>
+
+        <div class="campo">
+          <input type="text" id="codigo" maxlength="8" required>
+          <label for="codigo">Código (8 dígitos)</label>
+          <small id="erro-codigo" class="erro"></small>
+        </div>
+
+        <button type="submit" id="btn-criar" disabled>Criar espaço</button>
+      </form>
+
+      <a href="#" class="link-voltar">Fazer login</a>
+    </div>
+  </section>
+
+  <!-- TELA DE CONVITES -->
+  <section id="tela-convites" class="tela">
+    <div class="container">
+      <img src="img/logovermelha.png" alt="Logo Enna" class="logo">
+
+      <h1>Convide professores para colaborar no seu espaço</h1>
+      <div class="convite-form">
+        <div class="campo">
+          <input type="email" id="email-convite" required>
+          <label for="email-convite">E-mail do professor</label>
+        </div>
+        <button id="btn-enviar-convite" disabled>Enviar convite</button>
+      </div>
+
+      <div class="convites-lista" id="convites-lista">
+        <!-- prévias aparecem aqui -->
+        <div class="blur-bottom"></div>
+      </div>
+
+      <a href="#" class="link-pular">Pular</a>
+    </div>
+
+    <!-- Popup de confirmação -->
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <p id="popup-text"></p>
+        <div class="popup-botoes">
+          <button id="popup-sim">Sim</button>
+          <button id="popup-nao">Não</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

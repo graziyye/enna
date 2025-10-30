@@ -1,0 +1,205 @@
+/* ===========================
+   LOGIN (substituir seção)
+   =========================== */
+
+/* Card / container */
+
+/* Reset global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Remove scroll e brancos */
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #0D0D11; /* cor do fundo principal */
+  overflow: hidden;          /* impede scroll */
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+/* Garante que o container ocupe toda a tela */
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0D0D11;
+  flex-direction: column;
+}
+
+
+
+
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  background-color: #0D0D11; /* fundo escuro */
+  flex-direction: column;
+}
+
+/* Caixa do card (desktop principal) */
+.login-box {
+  background-color: #1D1B22; /* tom escuro do card */
+  width: 560px;              /* largura principal desktop */
+  max-width: 96%;
+  padding: 56px 64px;
+  border-radius: 32px;       /* cantos grandes como protótipo */
+  box-shadow:
+    0 28px 60px rgba(0,0,0,0.65),
+    inset 0 4px 12px rgba(255,255,255,0.02);
+  text-align: center;
+}
+
+/* Logo centralizada */
+.login-box .logo {
+  width: 160px;
+  height: auto;
+  display: block;
+  margin: 0 auto 36px;
+  filter: none;
+}
+
+/* Grupo de inputs — mantém alinhamento vertical */
+.login-form {
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+/* ===== esquema input (floating label) ===== */
+.input-group {
+  position: relative;
+  margin-bottom: 22px;
+  width: 100%;
+}
+
+/* campo real */
+.input-group input {
+  width: 100%;
+  padding: 14px 14px;
+  border-radius: 8px;
+  background: transparent;
+  color: #EDEDED;
+  border: 1px solid rgba(235, 189, 189, 0.06); /* borda bem apagada */
+  font-size: 15px;
+  outline: none;
+  transition: border-color .22s ease, box-shadow .22s ease, background .22s ease;
+}
+
+/* placeholder invisível (usamos label para texto) */
+.input-group input::placeholder {
+  color: transparent;
+}
+
+/* label que fica por cima do input */
+.input-group label {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(180,180,185,0.45); /* placeholder apagado */
+  font-size: 15px;
+  pointer-events: none;
+  background: transparent;
+  padding: 0 6px;
+  transition: all .22s ease;
+}
+
+/* quando o input tem foco ou valor: borda e label sobem */
+.input-group input:focus,
+.input-group input:not(:placeholder-shown) {
+  border-color: #EA331E;          /* borda principal */
+  box-shadow: 0 0 0 4px rgba(234,51,30,0.04);
+  background: transparent;
+}
+
+.input-group input:focus + label,
+.input-group input:not(:placeholder-shown) + label {
+  top: -10px;
+  transform: none;
+  left: 10px;
+  font-size: 12px;
+  color: #EA331E;                 /* label fica vermelha */
+  background-color: #1D1B22;      /* fundo do label igual ao card (cria efeito "recortado") */
+  line-height: 1;
+}
+
+/* estilo da borda mais visível quando hover */
+.input-group input:hover {
+  border-color: rgba(255,255,255,0.06);
+}
+
+/* ===== botão (esquema botão) ===== */
+#entrarBtn {
+  width: 100%;
+  padding: 14px 18px;
+  margin-top: 6px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  background: #6a6a6a;      /* cinza desativado no protótipo */
+  color: #fff;
+  cursor: not-allowed;
+  transition: background .22s ease, transform .08s ease;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+}
+
+/* quando ativo */
+#entrarBtn.ativo {
+  background: #EA331E;
+  cursor: pointer;
+  transform: translateY(-1px);
+}
+
+/* Link "Criar um Espaço" */
+.criar-espaco {
+  display: inline-block;
+  margin-top: 28px;
+  color: rgba(200,200,205,0.6);
+  text-decoration: underline;
+  font-size: 14px;
+  transition: color .18s;
+}
+
+.criar-espaco:hover {
+  color: #fff;
+}
+
+/* ===== Responsividade: versão vertical/mobile (ajustes finos) ===== */
+@media (max-width: 880px) {
+  .login-box {
+    width: 360px;
+    padding: 40px 28px;
+    border-radius: 22px;
+  }
+
+  .login-box .logo {
+    width: 120px;
+    margin-bottom: 26px;
+  }
+
+  .input-group input { padding: 12px; font-size: 14px; }
+  .input-group label { font-size: 14px; }
+  #entrarBtn { padding: 12px; font-size: 15px; }
+}
+
+@media (max-width: 420px) {
+  .login-box {
+    width: 320px;
+    padding: 34px 20px;
+    border-radius: 18px;
+  }
+
+  .login-box .logo { width: 110px; margin-bottom: 20px; }
+  .criar-espaco { margin-top: 18px; font-size: 13px; }
+}

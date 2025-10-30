@@ -1,0 +1,78 @@
+/* ======== CONFIGURAÇÕES GERAIS ======== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+}
+
+body {
+  background-color: #0D0C11;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* ======== CONTAINER PRINCIPAL ======== */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* ======== CARD ======== */
+.card {
+  background-color: #1A1821;
+  padding: 3rem 4rem;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+  text-align: center;
+  transition: 0.3s ease-in-out;
+  width: 350px;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 2rem;
+}
+
+/* ======== BOTÕES ======== */
+.botoes button {
+  display: block;
+  width: 100%;
+  padding: 0.9rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #EA331E;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.botoes button:hover {
+  background-color: #d12d1a;
+}
+
+/* ======== RESPONSIVIDADE ======== */
+@media (max-width: 768px) {
+  .card {
+    width: 85%;
+    padding: 2rem;
+  }
+
+  .logo {
+    width: 100px;
+    margin-bottom: 1.5rem;
+  }
+
+  .botoes button {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+}

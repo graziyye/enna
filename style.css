@@ -1,0 +1,206 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #222;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
+  text-align: center;
+  padding-top: 40px;
+}
+
+.logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 1.2rem;
+  margin-bottom: 25px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.campo {
+  position: relative;
+}
+
+.campo input {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+}
+
+.campo label {
+  position: absolute;
+  top: 10px;
+  left: 12px;
+  color: #999;
+  font-size: 14px;
+  transition: 0.3s;
+  background: #fff;
+  padding: 0 4px;
+  pointer-events: none;
+}
+
+.campo input:focus + label,
+.campo input:not(:placeholder-shown) + label {
+  top: -9px;
+  left: 8px;
+  font-size: 12px;
+  color: #EA331E;
+}
+
+.campo input:focus {
+  border-color: #EA331E;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #ccc;
+  color: #777;
+  cursor: not-allowed;
+}
+
+button:not(:disabled) {
+  background: #EA331E;
+  color: #fff;
+}
+
+.link-voltar,
+.link-pular {
+  display: block;
+  margin-top: 20px;
+  color: #EA331E;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* Convites */
+.convite-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.convites-lista {
+  position: relative;
+  max-height: 200px;
+  overflow-y: auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.convite-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.convite-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.convite-foto {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #EA331E;
+}
+
+.convite-email {
+  font-size: 13px;
+}
+
+.convite-status {
+  font-size: 12px;
+  color: #555;
+}
+
+.convite-delete {
+  cursor: pointer;
+  color: #EA331E;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Blur inferior */
+.blur-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 20px;
+  background: linear-gradient(to bottom, transparent, white);
+  pointer-events: none;
+}
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+}
+
+.popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  width: 80%;
+  max-width: 300px;
+}
+
+.popup-botoes {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.popup-botoes button {
+  width: 80px;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .container {
+    max-width: 450px;
+  }
+}
