@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suas Solicitações</title>
+    <link rel="stylesheet" href="solicitacoes.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="topbar">
+    <div class="left">
+      <img src="/img/logobranca.png" alt="Enna" class="logo">
+      <div class="texto">Suas Solicitações</div>
+    </div>
+    <button id="hamburger" class="hamburger" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <!-- menu lateral -->
+ <aside id="sideMenu" class="side-menu">
+    <button id="closeMenu" class="close-x" aria-label="Fechar menu">✕</button>
+    <nav class="menu">
+      <a href="/interfaceProfessor/telaInicial/telaInicial.html" class="menu-link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+  <path d="M8.707 1.5a1 1 0 0 0-1.414 0L.646 8.146a.5.5 0 0 0 .708.708L2 8.207V13.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V8.207l.646.647a.5.5 0 0 0 .708-.708L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM13 7.207V13.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V7.207l5-5z"/>
+</svg>Página Inicial <span class="icon"></span></a>
+      <a href="/interfaceProfessor/solicitações/solicitacoes.html" class="menu-link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chat-left-text" viewBox="0 0 16 16">
+  <path d="M14 1a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H4.414A2 2 0 0 0 3 11.586l-2 2V2a1 1 0 0 1 1-1zM2 0a2 2 0 0 0-2 2v12.793a.5.5 0 0 0 .854.353l2.853-2.853A1 1 0 0 1 4.414 12H14a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2z"/>
+  <path d="M3 3.5a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1-.5-.5M3 6a.5.5 0 0 1 .5-.5h9a.5.5 0 0 1 0 1h-9A.5.5 0 0 1 3 6m0 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5"/>
+</svg>Solicitações <span class="icon"></span></a>
+    </nav>
+    <div class="menu-bottom">
+      <a href="/telasIniciais/telaAbertura.html" class="logout">Sair da Conta</a>
+    </div>
+  </aside>
+
+    <!-- Conteúdo principal -->
+    <main class="container-cards">
+
+        <!-- Card aguardando -->
+        <div class="card-solicitacao aguardando">
+            <div class="info-superior">
+                <p class="data-turno">31/10 - Tarde</p>
+                <div class="menu-card">⋮</div>
+            </div>
+            <p class="laboratorio">Laboratório 2</p>
+            <div class="info-inferior">
+                <p class="horario">3º Horário</p>
+                <p class="turma">7º Ano C</p>
+                <p class="situacao aguardando">Situação: <strong>Aguardando</strong></p>
+            </div>
+        </div>
+
+        <!-- Card aceito -->
+        <div class="card-solicitacao aceito">
+            <div class="info-superior">
+                <p class="data-turno">31/10 - Tarde</p>
+                <button class="btn-confirmar">＋</button>
+            </div>
+            <p class="laboratorio">Laboratório 2</p>
+            <div class="info-inferior">
+                <p class="horario">3º Horário</p>
+                <p class="turma">7º Ano C</p>
+                <p class="situacao aceito">Situação: <strong>Aceito</strong></p>
+            </div>
+        </div>
+
+        <!-- Card recusado -->
+        <div class="card-solicitacao recusado">
+            <div class="info-superior">
+                <p class="data-turno">31/10 - Tarde</p>
+                <button class="btn-excluir">🗑</button>
+            </div>
+            <p class="laboratorio">Laboratório 2</p>
+            <div class="info-inferior">
+                <p class="horario">3º Horário</p>
+                <p class="turma">7º Ano C</p>
+                <p class="situacao recusado">Situação: <strong>Rejeitado</strong></p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Popup de confirmação -->
+    <div id="popup-confirmacao" class="popup">
+        <div class="conteudo-popup">
+            <p id="texto-popup"></p>
+            <div class="botoes-popup">
+                <button id="botao-sim">Sim</button>
+                <button id="botao-nao">Não</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="solicitacoes.js"></script>
+</body>
+</html>
