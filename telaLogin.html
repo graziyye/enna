@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Enna</title>
+</head>
+<body>
+    <div id="telaLogin">
+        <div class="container">
+            <div class="card">
+                <img src="/img/logovermelha.png" alt="" class="logo">
+                <form id="loginForm">
+                    <div class="input">
+                        <input type="text" id="email" required placeholder=" ">
+                        <label for="email">E-mail Cadastrado</label>
+                    </div>
+
+                    <div class="input">
+                        <input type="text" id="codigo" required placeholder=" ">
+                        <label for="codigo">Código do Espaço</label>
+                    </div>
+
+                    <a href="/interfaceProfessor/telaInicial/telaInicial.html"><button type="submit" id="btnEntrar" disabled>Entrar</button></a>
+                </form>
+            </div>
+            <a href="/telasIniciais/telaAbertura.html" id="criarEspaco">Criar um Espaço</a>
+        </div>
+    </div>
+
+    <!--estilização-->
+
+
+    <style>
+
+:root{
+    --fundo: #101016;
+    --preto: #22212A;
+    --vermelho: #EA331E;
+    --vermelho2: #e2594a;
+}
+        
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: var(--fundo);
+    color: #fff;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card{
+    background-color: var(--preto);
+    width: 560px;
+    max-width: 96%;
+    padding: 56px 64px;
+    border-radius: 32px;
+    box-shadow: 0 28px 60px rgba(0, 0, 0, 0.65), inset 0 4px 12px rgba(255, 255, 255, 0.02);
+    text-align: center;
+}
+
+.logo{
+    width: 160px;
+    height: auto;
+    display: block;
+    margin: 0 auto 36px;
+    filter: none
+}
+
+
+.loginForm{
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto
+}
+
+.input{
+    position: relative;
+    margin-bottom: 22px;
+    width: 100%;
+}
+
+.input input{
+    width: 100%;
+    padding: 14px 14px;
+    border-radius: 8px;
+    background: transparent;
+    color: white;
+    border: 1px solid rgba(235, 189, 189, 0.06);
+    font-size: 15px;
+    outline: none;
+    transition: border-color .22s ease, box-shandow .22s ease, background .22s ease;
+}
+
+.input input::placeholder{
+    color: transparent;
+}
+
+.input label{
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(180, 180, 185, 0.45);
+    font-size: 15px;
+    pointer-events: none;
+    background: transparent;
+    padding: 0 6px;
+    transition: all .22s ease;
+
+}
+
+
+.input input:focus, .input input:not(:placeholder-shown){
+    border-color: var(--vermelho);
+    box-shadow: 0 0 0 4px rgba(234, 51, 30, 0.04);
+    background: transparent;
+}
+
+.input input:focus + label, .input input:not(:placeholder-shown) + label{
+    top: -10px;
+    transform: none;
+    left: 10px;
+    font-size: 12px;
+    color: var(--vermelho);
+    background-color: var(--preto);
+    line-height: 1;
+}
+
+.input input:hover{
+    border-color: rgba(255, 255, 255, 0.06);
+}
+
+#btnEntrar{
+    width: 100%;
+    padding: 14px 18px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    background: #6a6a6a;
+    color: #fff;
+    cursor: not-allowed;
+    transition: background .22s ease, transform .08s ease;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+#btnEntrar.ativo{
+    background-color: var(--vermelho);
+    cursor: pointer;
+    transform: translateY(-1px);
+}
+
+#criarEspaco{
+    display: inline-block;
+    margin-top: 28px;
+    color: rgba(200, 200, 205, 0.6);
+    text-decoration: underline;
+    font-size: 14px;
+    transition: color .18s;
+}
+
+#criarEspaco:hover{
+    color: #fff;
+}
+
+@media (max-width: 880px){
+    
+    .card{
+        width: 360px;
+        padding: 40px 28px;
+        border-radius: 22px;
+    }
+
+    .logo{
+        width: 120px;
+        margin-bottom: 26px;
+    }
+
+    .input input {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .input label{
+        font-size: 14px;
+    }
+
+    #btnEntrar{
+        padding: 12px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 420px){
+    .card{
+        width: 320px;
+        padding: 34px 20px;
+        border-radius: 18px;
+    }
+
+    .logo{
+        width: 110px;
+        margin-bottom: 20px;
+    }
+
+    #criarEspaco{
+        margin-top: 18px;
+        font-size: 13px;
+    }
+}
+
+
+    </style>
+
+    <!--javascript-->
+
+    <script>
+        console.log("teste")
+        const inputEmail = document.getElementById('email');
+        const inputCodigo = document.getElementById('codigo');
+        const btnEntrar = document.getElementById('btnEntrar');
+        
+if (inputEmail && inputCodigo && btnEntrar) {
+    function verificarCampos(){
+        if (inputEmail.value.trim() !== "" && inputCodigo.value.trim()!== ""){
+                btnEntrar.classList.add("ativo");
+                btnEntrar.disable = false;
+        }else{
+                btnEntrar.classList.remove("ativo");
+                btnEntrar.disable = true;
+    }
+}
+
+
+            inputEmail.addEventListener("input", verificarCampos);
+            inputCodigo.addEventListener("input", verificarCampos)
+}
+    </script>
+
+
+</body>
+</html>

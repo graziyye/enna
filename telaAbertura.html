@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/telasIniciais.css">
+    <title>Enna</title>
+</head>
+<body>
+    <div id="telaAbertura">
+        <div class="containerAbertura">
+            <div class="cardAbertura">
+                <img src="/img/logovermelha.png" alt="" class="logoAbertura">
+                <div class="botoesAbertura">
+                    <a href="/telasIniciais/criarEspaco.html"><button id="criarEspaco">Criar Espaço</button></a>
+                    <a href="/telasIniciais/telaLogin.html"><button id="fazerLogin">Fazer Login</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--estilização-->
+
+    <style>
+        :root{
+    --fundo: #101016;
+    --preto: #22212A;
+    --vermelho: #EA331E;
+    --vermelho2: #e2594a;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    background-color: var(--fundo);
+}
+
+.containerAbertura{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.cardAbertura{
+    background-color: var(--preto);
+    padding: 3rem 4rem;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    width: 350px;
+}
+
+.logoAbertura{
+    width: 120px;
+    margin-bottom: 2rem;
+
+}
+
+.botoesAbertura button{
+    display: bloc;
+    width: 100%;
+    padding: 0.9rem;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--vermelho);
+    color: #fff;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+}
+
+.botoesAbertura button:hover{
+    background-color: var(--vermelho2);
+}
+
+@media (max-width: 768px){
+    .cardAbertura{
+        width: 85%;
+        padding: 2rem;
+    }
+
+    .logoAbertura{
+        width: 100px;
+        margin-bottom: 1.5rem;
+    }
+
+    .botoesAbertura button{
+        font-size: 0.95rem;
+        padding: 0.8rem;
+    }
+}
+    </style>
+    
+</body>
+</html>
