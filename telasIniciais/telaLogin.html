@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/favicon.png" type="image/x-icon">
     <title>Login Enna</title>
 </head>
 <body>
@@ -21,7 +22,9 @@
                         <label for="codigo">Código do Espaço</label>
                     </div>
 
-                    <a href="/interfaceProfessor/telaInicial/telaInicial.html"><button type="submit" id="btnEntrar" disabled>Entrar</button></a>
+                    
+                    <button id="btnEntrar" disable><a href="/interfaceProfessor/telaInicial/telaInicial.html">Entrar</a></button>
+                    
                 </form>
             </div>
             <a href="/telasIniciais/telaAbertura.html" id="criarEspaco">Criar um Espaço</a>
@@ -141,6 +144,11 @@ body{
 
 .input input:hover{
     border-color: rgba(255, 255, 255, 0.06);
+}
+
+#btnEntrar a{
+    text-decoration: none;
+    color: #fff;
 }
 
 #btnEntrar{

@@ -224,7 +224,6 @@ html,body{height:100%;margin:0;font-family:"Poppins",sans-serif;background:#fff}
 }
 
 
-/* scheduler panel */
 .scheduler{
   background:var(--card);
   padding:22px;
@@ -276,7 +275,7 @@ html,body{height:100%;margin:0;font-family:"Poppins",sans-serif;background:#fff}
 }
 
 
-/* custom selects */
+
 .select-wrapper{
   background:#3b3640;
   border-radius:8px;
@@ -312,14 +311,14 @@ html,body{height:100%;margin:0;font-family:"Poppins",sans-serif;background:#fff}
 .select-list .item:hover{background:rgba(255,255,255,0.03)}
 .select-wrapper.open .select-list{display:block}
 
-/* labs */
+
 .labs label
 {display:block;
   margin-bottom:8px;
   color:#fff
 }
 
-/* actions */
+
 .request-btn{
   background:var(--primaria);
   color:#fff;
@@ -338,7 +337,7 @@ html,body{height:100%;margin:0;font-family:"Poppins",sans-serif;background:#fff}
   margin-top:6px
 }
 
-/* popup confirm */
+
 .confirm-popup{
   position:fixed;
   inset:0;
@@ -379,7 +378,7 @@ html,body{height:100%;margin:0;font-family:"Poppins",sans-serif;background:#fff}
 }
 .btn.ok{background:var(--primaria);color:#fff}
 
-/* responsive */
+
 @media (max-width: 900px){
   .scheduler-body{flex-direction:column}
   .right-fields{width:100%}

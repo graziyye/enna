@@ -1,4 +1,4 @@
-// função geral p os popups
+
 const popup = document.getElementById("popup-confirmacao");
 const textoPopup = document.getElementById("texto-popup");
 const botaoSim = document.getElementById("botao-sim");
@@ -14,7 +14,7 @@ let acaoAtual = null;
 let cardSelecionado = null;
 
 
-  // hamburger
+
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('open');
     sideMenu.classList.toggle('visible');
@@ -64,7 +64,7 @@ botaoNao.addEventListener("click", () => {
     popup.style.display = "none";
 });
 
-// fechar popup ao clicar fora
+// fechar popup clicar fora
 popup.addEventListener("click", (e) => {
     if (e.target === popup) popup.style.display = "none";
 });
